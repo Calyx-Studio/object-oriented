@@ -1,8 +1,8 @@
 <?php
 
-namespace CalyxStudio\ObjectOriented\Author;
+namespace CalyxStudio\ObjectOriented\Php;
 
-require_once(dirname(__DIR__, 2) . "/vendor/autoload.php");
+require_once(dirname(__DIR__, 3) . "/Classes/autoload.php");
 
 use Ramsey\Uuid\Uuid;
 /**
@@ -17,7 +17,7 @@ use Ramsey\Uuid\Uuid;
  * @author Demetria Gutierrez <fullstack@calyx.studio>
  * @version 4.0.0
  **/
-class author  {
+class Author {
 	use ValidateUuid;
 
 	//All STATE VARIABLES
@@ -113,9 +113,9 @@ class author  {
 		$this->authorActivationToken = $newAuthorActivationToken;
 	}
 	/**
-	 * accessor method for at handle
+	 * accessor method for username
 	 *
-	 * @return string value of at handle
+	 * @return string value of username
 	 **/
 	public function getAuthorUsername(): string {
 		return ($this->authorUsername);
@@ -131,7 +131,7 @@ class author  {
 	public function setAuthorUsername(string $newAuthorUsername) : void {
 		// verify the username is secure
 		$newAuthorUsername = trim($newAuthorUsername);
-		$newAuthorUsername = filter_var($newAuthorUsernamee, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+		$newAuthorUsername = filter_var($newAuthorUsername, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 		if(empty($newAuthorUsername) === true) {
 			throw(new \InvalidArgumentException("author username is empty or insecure"));
 		}
