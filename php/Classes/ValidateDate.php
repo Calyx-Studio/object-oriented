@@ -1,5 +1,5 @@
 <?php
-namespace CalyxStudio\ObjectOriented\Php;
+namespace CalyxStudio\ObjectOriented;
 /**
  * Trait to Validate a mySQL Date
  *

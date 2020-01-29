@@ -1,7 +1,7 @@
 <?php
 
-namespace CalyxStudio\ObjectOriented\Php;
-require_once(dirname(__DIR__, 3) . "/Classes/autoload.php");
+namespace CalyxStudio\ObjectOriented;
+require_once(dirname(__DIR__) . "/vendor/autoload.php");
 use Ramsey\Uuid\Uuid;
 /**
  * Trait to validate a uuid
